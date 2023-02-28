@@ -31,33 +31,33 @@ function addRows() {
   document.querySelector(".z-rows").innerHTML = rows2;
 }
 
-//Graph
-const ctx = document.getElementById("myChart");
+// //Graph
+// const ctx = document.getElementById("myChart");
 
-new Chart(ctx, {
-  type: "line",
-  data: {
-    labels: [
-      -3.25, -3.0, -2.75, -2.5, -2.25, -2.0, -1.75, -1.5, -1.25, -1.0, -0.75,
-      -0.5, -0.25, 0.0, 0.25, 0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0, 2.25, 2.5,
-      2.75, 3.0, 3.25,
-    ],
-    datasets: [
-      {
-        label: "Graph of z values",
-        data: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
-        borderWidth: 1,
-      },
-    ],
-  },
-  options: {
-    scales: {
-      y: {
-        beginAtZero: true,
-      },
-    },
-  },
-});
+// new Chart(ctx, {
+//   type: "line",
+//   data: {
+//     labels: [
+//       -3.25, -3.0, -2.75, -2.5, -2.25, -2.0, -1.75, -1.5, -1.25, -1.0, -0.75,
+//       -0.5, -0.25, 0.0, 0.25, 0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0, 2.25, 2.5,
+//       2.75, 3.0, 3.25,
+//     ],
+//     datasets: [
+//       {
+//         label: "Graph of z values",
+//         data: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+//         borderWidth: 1,
+//       },
+//     ],
+//   },
+//   options: {
+//     scales: {
+//       y: {
+//         beginAtZero: true,
+//       },
+//     },
+//   },
+// });
 
 var expectedTime = [];
 var deviation = [];

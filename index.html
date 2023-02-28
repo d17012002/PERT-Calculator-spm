@@ -58,11 +58,8 @@
 
       <br /><br />
 
-          <div class="z-desc">
-            NOTE: If the target is given then we can calculate the z-value. Looking up in the table of z values you will be able to determine the probabilty of not meeting the target in percent.
-          </div>
-          <div class="z-input">
-              <table class="table table-bordered">
+      <div class="z-input">
+        <table class="table table-bordered">
                   <thead>
                       <tr>
                           <th scope="col">Activity</th>
@@ -83,12 +80,19 @@
             </div>
             <button class="btn btn-sm btn-dark" onclick="calcZ(); return false;">Calculate</button>
 
-        <br>
-        <div class="container graph">
-            <canvas id="myChart" aria-label="chart" role="img"></canvas>
+            <br><br>
+            <div class="z-desc">
+              NOTE: If the target is given then we can calculate the z-value. Looking up in the table of z values you will be able to determine the probabilty of not meeting the target in percent.
+            </div>
+            <div class="container graph">
+          
+          <center>
+            <img width="70%" src="graph.jpg" alt="">
+          </center>
+            
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
     <script src="script.js"></script>
   </body>
 </html>

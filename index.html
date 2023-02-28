@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>PERT - Group 5</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading">`PERT Calculator`</div>
+      <br /><br />
+      <div class="activity-input">
+        Number of Activities :
+        <input class="rowNum" type="number" placeholder=" 1" min="1" onchange="addRows(); return false;" required />
+      </div>
+      <br />
+
+        <div class="input-table">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">Activity</th>
+                <th scope="col">Most Likely Time (m)</th>
+                <th scope="col">Optimistic Time (a)</th>
+                <th scope="col">Pessimistic Time (b)</th>
+                <th scope="col">Expected Time (t<sub>e</sub>)</th>
+                <th scope="col">Standard Deviation (s)</th>
+              </tr>
+            </thead>
+            <tbody class="deviation-row">
+              <!-- <tr>
+                <th scope="row">1</th>
+                <td>
+                  <input type="number" placeholder="m" min="0" required />
+                </td>
+                <td>
+                  <input type="number" placeholder="a" min="0" required />
+                </td>
+                <td>
+                  <input type="number" placeholder="b" min="0" required />
+                </td>
+                <td>24.63</td>
+                <td>42</td>
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+        <button type="submit" class="btn btn-sm btn-dark" onclick="calDeviation();">Calculate</button>
+        
+
+      <br /><br />
+
+          <div class="z-desc">
+            NOTE: If the target is given then we can calculate the z-value. Looking up in the table of z values you will be able to determine the probabilty of not meeting the target in percent.
+          </div>
+          <div class="z-input">
+              <table class="table table-bordered">
+                  <thead>
+                      <tr>
+                          <th scope="col">Activity</th>
+                          <th scope="col">Target Days (T)</th>
+                          <th scope="col">Z value = (T-t<sub>e</sub>)/s</th>
+                        </tr>
+                    </thead>
+                    <tbody class="z-rows">
+                        <!-- <tr>
+                            <th scope="row">1</th>
+                            <td>
+                                <input type="number" placeholder="T" min="0" required />
+                            </td>
+                            <td>34</td> -->
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <button class="btn btn-sm btn-dark" onclick="calcZ(); return false;">Calculate</button>
+
+        <br>
+        <div class="container graph">
+            <canvas id="myChart" aria-label="chart" role="img"></canvas>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

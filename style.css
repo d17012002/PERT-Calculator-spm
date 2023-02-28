@@ -1,0 +1,36 @@
+*, html{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: rgb(240, 240, 240);
+}
+
+.container{
+    margin: 3% 5% 5% 5%;
+}
+
+.heading{
+    font-family: serif;
+    font-size: xx-large;
+    font-weight: 500;
+}
+
+
+.z-input, .input-table{
+    background: white;
+    box-shadow: 2px 2px 2px 1px rgba(197, 197, 197, 0.2);
+}
+
+.activity-input{
+    background: white;
+    padding: 1%;
+    border: 0.5px solid rgb(221, 221, 221);
+    box-shadow: 2px 2px 2px 1px rgba(197, 197, 197, 0.2);
+}
+
+.z-desc{
+    font-size: small;
+    font-family: 'Courier New', Courier, monospace;
+}
